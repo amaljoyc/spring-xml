@@ -25,6 +25,10 @@ public class MainApp {
 		HelloWorld obj2 = (HelloWorld) context.getBean("helloWorld");
 		System.out.println("Check the scope of bean(Singleton/Prototype) " + obj2.getMessage());
 
+		HelloEarth he = (HelloEarth) context.getBean("helloEarth");
+		System.out.println("From Earth: size=" + he.getSize());
+		System.out.println("From Earth: Message: " + he.getMessage());
+
 		context.registerShutdownHook();
 	}
 }
